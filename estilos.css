@@ -167,6 +167,11 @@
   }
   
   #mensajeError {
+    width: 300px;
+    border-radius: 100px 100px 100px 100px;
+    background: #000;
+    position: fixed; /*lo ocupamos para que se quede fijo*/
+    z-index: 1; /*esto lo ocupamos para que este por encima del resto*/
     margin-top: 10px;
     font-size: 25px;
     color: red;
