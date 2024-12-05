@@ -17,11 +17,12 @@
   html{
     scroll-behavior: smooth;
   }
-  
+
   .espacio {
     width: 100%; /*ancho*/
     height: 90px; /*alto*/
   }
+ 
   
   /*empezamos a editar el menu parte superior....//////////////////////////////////////*/
   nav.menuprincipal {
@@ -39,9 +40,8 @@
     /*  background: #780206;
     background: -webkit-linear-gradient(to right, #061161, #780206);*/
     /*padding: 0 3%; */
-    /*position: fixed;*/
-    /*z-index: -1;*/
-    /*position: relative; */
+    position: fixed; /*este lo ocupamos para que el menu quede fijo*/
+    z-index: 1;/*esto lo ocupamos para poner el menu por encima de todo el resto al bajar*/
   }
   
   /*aqui empezamos a editarlas el menu superior....//////////////////////////////////*/
@@ -151,13 +151,16 @@
   
   
   .buscador-container {
+    width: 300px;
+    margin: 20px auto;
     text-align: center;
     margin-bottom: 20px;
-    position: relative;
+    /* position: relative; */
   }
   
   #buscador {
-    padding: 10px;
+    font-size: 23px;
+    padding: 6px 10px 6px 10px;
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -165,7 +168,7 @@
   
   #mensajeError {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 25px;
     color: red;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -176,16 +179,19 @@
   }
   
   #sugerencias {
+    font-size: 25px;
     list-style: none;
-    margin: 10px 0 0;
+    color: beige;
+    margin: 0;
     padding: 0;
     width: 300px;
-    border: 1px solid #ccc;
+    /* height: 600px; */
+    border: 10px solid #000;
     border-radius: 5px;
     max-height: 150px;
     overflow-y: auto;
     display: none;
-    background: white;
+    background: #121212;
     position: absolute;
     z-index: 10;
   }
@@ -193,22 +199,25 @@
   .sugerencias li {
     padding: 10px;
     cursor: pointer;
-  }
-  
-  .sugerencias li:hover {
-    background-color: #f0f0f0;
+    border: 10px solid #780206;
   }
   
   /* le damos estilo al mensaje de buscando cuando carga al buscar la pelicula */
   #spinner {
-    margin-top: 10px;
-    font-size: 16px;
+    width: 200px;
+    background: #fff;
+    border-radius: 100px 100px 0px 100px;
+    margin: 0px 50px 0px 50px;
+    font-size: 30px;
     color: #007bff;
     display: none;
+    position: fixed;
+    z-index: 1;
   }
   
   .no-results {
     position: fixed;
+    font-size: 30px;
     top: 26%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -434,7 +443,7 @@
   }
   
   .indicator.active {
-    background-color: red;
+    background-color: blue;
   }
   
   
