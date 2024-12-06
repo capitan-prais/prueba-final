@@ -34,14 +34,14 @@
     background: linear-gradient(to right, #061161, #780206);
     box-shadow: 50px 60px 17px -14px rgba(0,0,0,0.45);
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* text-align: center; */
     /*float: left;*/
     /*  background: #780206;
     background: -webkit-linear-gradient(to right, #061161, #780206);*/
     /*padding: 0 3%; */
     position: fixed; /*este lo ocupamos para que el menu quede fijo*/
-    z-index: 1;/*esto lo ocupamos para poner el menu por encima de todo el resto al bajar*/
+    z-index: 9999;/*esto lo ocupamos para poner el menu por encima de todo el resto al bajar*/
   }
   
   /*aqui empezamos a editarlas el menu superior....//////////////////////////////////*/
@@ -124,17 +124,17 @@
       width: 40%; /*ancho*/
       height: 75%; /*alto*/
       padding: 15px;
-      z-index: 1;
+      z-index: 9999;
       position: fixed;
-      top: 70px;
-      left: 0px;
+      top: 65px; /*subimos o bajamos el menu lateral*/
+      left: 100%;
       background: #780206;
       background: -webkit-linear-gradient(to right, #061161, #780206);
       background: linear-gradient(to right, #061161, #780206);
       flex-direction: column;
       line-height: 40px;
       transition: all 0.5s ease;
-      transform: translateX(250%); 
+      /* transform: translateX(250%);  */
       /* text-align: center; */
       /* align-items: center; */
     }
@@ -145,7 +145,7 @@
     }
   
     .menu.active {
-      transform: translateX(155%); /*para mover el menu lateral para la derecha*/
+      left: 60%; /*lo ocupamos para mover el menu lateral a la izquierda o la derecha al activarse*/
     
     }
   
@@ -162,6 +162,12 @@
     /* position: relative; */
   }
   
+    /*esto lo ocupamos para que cuando al tocar un boton del menu nos dirija aal contenido y lo deje donde queremos de forma vertical */
+    @media screen and (max-width: 1150px){
+      .hero {
+        scroll-margin-top: 85px;
+      }
+    }
   #buscador {
     font-size: 23px;
     padding: 6px 10px 6px 10px;
@@ -169,6 +175,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
+
   
   #mensajeError {
     width: 300px;
@@ -251,18 +258,17 @@
   /*aqui estilamos el carrusel//////////////////////////////////////*/
   
   .hero {
-    margin: 0px 0px 50px 0px;
+    margin: 0px 0px 55px 0px;
     width: 100%; /*ancho*/
-    height: 700px; /*alto*/
+    height: 620px; /*alto*/
     position: relative; /*pone todo lo que esta dentro una encima de la otra*/
     scroll-margin-top: 100px; /*este lo ocupamos para mover el contenido al apretar donde queremos ir, al apretar cualquier tipo de pelicula enlos botones del menu en la parte de arriba*/
-  
   }
   
   /*esto lo ocupamos para que cuando al tocar un boton del menu nos dirija aal contenido y lo deje donde queremos de forma vertical */
   @media screen and (max-width: 1150px){
     .hero {
-      scroll-margin-top: 110px;
+      scroll-margin-top: 85px;
     }
   }
   
@@ -333,7 +339,8 @@
   @media screen and (max-width: 1150px){
     .titulo{
       width: 80%;
-      height: 13%;
+      height: 10%;
+      font-size: 50px; /*tamaño de letra*/
       padding: 8px 0px 0px 0px;
     }
   }
@@ -363,7 +370,7 @@
   
   .carousel-item img {
     /* max-width: 100%; */
-    height: 500px;
+    height: 535px;
   }
 
   
@@ -436,6 +443,7 @@
   .indicators {
     position: absolute;
     bottom: 10px;
+    top: 94%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
