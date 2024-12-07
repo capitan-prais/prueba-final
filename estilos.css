@@ -106,7 +106,7 @@
   /*Aqui empezamos a editar el menu lateral..../////////////////////////////////////////*/
   
   @media screen and (max-width: 1150px) {
-    
+    /*aqui modificamos el contenedor del logo del menu*/
     .menu-btn {
       width: 50px;
       height: 50px;
@@ -114,7 +114,7 @@
       margin: 20px auto;
       /* transition: all 10s ease;  */
     }
-  
+  /*aqui modificamos la imagen del menu*/
     .menu-btn img {
       
       filter: drop-shadow(1px 1px 10px  #fff);
@@ -123,29 +123,51 @@
     .menu {
       width: 40%; /*ancho*/
       height: 75%; /*alto*/
-      padding: 15px;
+      margin: 10px auto;
+      padding: 20px;
       z-index: 9999;
       position: fixed;
-      top: 65px; /*subimos o bajamos el menu lateral*/
+      top: 60px; /*subimos o bajamos el menu lateral*/
       left: 100%;
       background: #780206;
       background: -webkit-linear-gradient(to right, #061161, #780206);
       background: linear-gradient(to right, #061161, #780206);
-      flex-direction: column;
+      flex-direction: column; /*lo ocupamos para que los botones de menu aparescan de forma vertical*/
       line-height: 40px;
       transition: all 0.5s ease;
       /* transform: translateX(250%);  */
       /* text-align: center; */
       /* align-items: center; */
     }
+
+    li {
+      width: 100%;
+      /* padding: 5px auto; */
+      margin: 10px auto;
+      display: list-item;
+      text-align: -webkit-match-parent;
+      unicode-bidi: isolate;
+  }
   
     /*separacion entre botnes del menu*/
     .menu-i{
-      margin: 20px 0px 20px 0px;
+      padding: 5px;
+      font-size: 20px;
+      border-radius: 2em;
+      border-width: 2px;
+      align-items: center;
+      cursor: pointer;
+      color: rgb(219, 218, 218);
+      border-style: solid;
+      background-color: transparent;
+      border-color: rgb(219, 218, 218);
+      line-height: 35px; /*subimos o bajamos la letra*/
+      transition: 0.2s ease;
+      margin: 5px auto;
     }
   
     .menu.active {
-      left: 60%; /*lo ocupamos para mover el menu lateral a la izquierda o la derecha al activarse*/
+      left: 62%; /*lo ocupamos para mover el menu lateral a la izquierda o la derecha al activarse*/
     
     }
   
