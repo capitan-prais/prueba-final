@@ -236,27 +236,19 @@ const btn = document.querySelector('.menu-btn');
 type="text/javascript">
 	$(document).ready(function(){
 
-		$('.menu-i').mouseup(function(){
-			$('audio')[1].play();
-		});
+		// $('.menu-i').mouseup(function(){
+		// 	$('audio')[1].play();
+		// });
 
-		$('.imagenpeli').mouseenter(function(){
-			$('audio')[5].play();
-		});
+		// $('.imagenpeli').mouseenter(function(){
+		// 	$('audio')[5].play();
+		// });
 
-		$('.logo4').mouseup(function(){
-			$('audio')[3].play();
-		});
+		// $('.ContenedorBuscador').mouseup(function(){
+		// 	$('audio')[4].play();
+		// });
 
-		$('.logo4').mouseenter(function(){
-			$('audio')[3].pause();
-		});
-
-		$('.ContenedorBuscador').mouseup(function(){
-			$('audio')[4].play();
-		});
-
-		$('.n').mousedown(function(){
-			$('audio')[6].play();
-		});
+		// $('.n').mousedown(function(){
+		// 	$('audio')[6].play();
+		// });
 	});

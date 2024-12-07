@@ -235,9 +235,9 @@ const btn = document.querySelector('.menu-btn');
 
 type="text/javascript">
 	$(document).ready(function(){
-		$('.menu-i').mouseover(function(){
-			$('audio')[0].play();
-		});
+		// $('.menu-i').mouseover(function(){
+		// 	$('audio')[0].play();
+		// });
 
 		$('.menu-i').mouseup(function(){
 			$('audio')[1].play();
