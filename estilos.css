@@ -242,7 +242,7 @@
   
   /* le damos estilo al mensaje de buscando cuando carga al buscar la pelicula */
   #spinner {
-    width: 200px;
+    width: 230px;
     background: #fff;
     border-radius: 100px 100px 0px 100px;
     margin: 0px 50px 0px 50px;
