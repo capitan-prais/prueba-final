@@ -11,12 +11,6 @@
     color: #fff;
     background-image: url(imagenes/peliculas.jpg); 
   }
-  
-  /*aqui editamos como queremos que sea el scroll al apretar el tipo de pelicula en el menu*/
-  
-  html{
-    scroll-behavior: smooth;
-  }
 
   .espacio {
     width: 100%; /*ancho*/
@@ -42,6 +36,12 @@
     /*padding: 0 3%; */
     position: fixed; /*este lo ocupamos para que el menu quede fijo*/
     z-index: 9999;/*esto lo ocupamos para poner el menu por encima de todo el resto al bajar*/
+  }
+
+   /*aqui editamos como queremos que sea el scroll al apretar el tipo de pelicula en el menu*/
+  
+   html{
+    scroll-behavior: smooth;
   }
   
   /*aqui empezamos a editarlas el menu superior....//////////////////////////////////*/
@@ -75,7 +75,7 @@
     /* letter-spacing: 2px; */
   }
   
-  /*cumple estos estilos al pasar el mause por encima*/
+  /*cumple estos estilos al pasar el mause por encima o los deja fijo al pasarlos a pantalla de celular*/
   .menu-i:hover {
     width: 130px; /*ancho*/
     height: 50px; /*alto*/
@@ -378,6 +378,12 @@
   .carousel .carousel-item img:active{
     transform: scale(1.1); 
    }
+
+   @media screen and (max-width: 1150px){
+    .carousel .carousel-item img:active{
+      transform: none; 
+    }
+  }
   
    .imagenpeli {
   width: 280px;
@@ -402,7 +408,7 @@
     /* font-weight: bold; */
     /* position: fixed; */
     /* display: flex; */
-    transform: translateY(1300%); /* nos sirve para subir o bajar en contenido*/
+    transform: translateY(1000%); /* nos sirve para subir o bajar en contenido*/
     /* z-index: 1; */
     /* top: -100%; */
   }
